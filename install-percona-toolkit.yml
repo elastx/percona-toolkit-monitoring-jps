@@ -3,15 +3,17 @@ jpsType: update
 jpsVersion: 1.1
 targetNodes:
   nodeType:
+  - mysql
   - mysql5
   - mariadb-dockerized
   - mariadb10
   - mariadb
+  - Percona
 categories:
 - apps/dev-and-admin-tools
 name: Percona Toolkit (MySQL/MariaDB management CLI tools)
 version: 3.0.5
-homepage: https://elastx.se/en
+homepage: https://www.percona.com/software/database-tools/percona-toolkit 
 logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-jps/master/img/percona-toolkit.png'
 description:
   short: Percona Toolkit for easier management
