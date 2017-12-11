@@ -1,0 +1,41 @@
+---
+jpsType: update
+jpsVersion: 1.1
+targetNodes:
+  nodeType:
+  - mysql5
+  - mariadb-dockerized
+  - mariadb10
+  - mariadb
+categories:
+- apps/dev-and-admin-tools
+name: Percona Toolkit (MySQL/MariaDB management CLI tools)
+version: 3.0.5
+homepage: https://elastx.se/en
+logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-jps/master/img/percona-toolkit.png'
+description:
+  short: Percona Toolkit for easier management
+  text: Percona Toolkit is a collection of advanced command-line tools used by Percona) support staff to perform a variety of MySQL, MongoDB, and system tasks that are too difficult or complex to perform manually.
+onInstall:
+  call:
+  - procedure: addPerconaToolkit
+onUninstall:
+  call:
+    procedure: removePerconaToolkit
+procedures:
+- id: addPerconaToolkit
+  onCall:
+  - executeShellCommands:
+    - nodeMission: sqldb
+      commands:
+      - yum install -y https://www.percona.com/downloads/percona-toolkit/3.0.5/binary/redhat/7/x86_64/percona-toolkit-3.0.5-1.el7.x86_64.rpm
+      user: root
+- id: removePerconaToolkit
+  onCall:
+  - executeShellCommands:
+    - nodeMission: sqldb
+      commands:
+      - yum remove -y percona-toolkit
+      user: root
+
+success: The installation has been successfully completed.
