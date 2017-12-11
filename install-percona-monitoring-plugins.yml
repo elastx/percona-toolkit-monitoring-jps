@@ -16,8 +16,8 @@ version: 1.1.7
 homepage: https://www.percona.com/software/database-tools/percona-monitoring-plugins 
 logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-jps/master/img/percona-monitoring.png'
 description:
-  short: Percona Monitoring Plugins
-  text: Percona Monitoring Plugins are high-quality components to add enterprise-class MySQL® and MongoDB® monitoring and graphing capabilities to your existing on-premise monitoring solutions.
+  short: Percona Monitoring Plugins (Nagios)
+  text: Percona Monitoring Plugins (Nagios) are high-quality components to add enterprise-class MySQL® and MongoDB® monitoring and graphing capabilities to your existing on-premise monitoring solutions.
 onInstall:
   call:
   - procedure: addPerconaMonitoring
@@ -30,8 +30,6 @@ procedures:
   - executeShellCommands:
     - nodeMission: sqldb
       commands:
-      - yum install -y https://www.percona.com/downloads/percona-monitoring-plugins/percona-monitoring-plugins-1.1.7/binary/redhat/7/x86_64/percona-cacti-templates-1.1.7-2.noarch.rpm
-      - yum install -y https://www.percona.com/downloads/percona-monitoring-plugins/percona-monitoring-plugins-1.1.7/binary/redhat/7/x86_64/percona-zabbix-templates-1.1.7-2.noarch.rpm
       - yum install -y https://www.percona.com/downloads/percona-monitoring-plugins/percona-monitoring-plugins-1.1.7/binary/redhat/7/x86_64/percona-nagios-plugins-1.1.7-2.noarch.rpm
       user: root
 - id: removePerconaMonitoring
@@ -39,8 +37,6 @@ procedures:
   - executeShellCommands:
     - nodeMission: sqldb
       commands:
-      - yum remove -y percona-cacti-templates
-      - yum remove -y percona-zabbix-templates
       - yum remove -y percona-nagios-plugins
       user: root
 
