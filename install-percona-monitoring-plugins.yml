@@ -14,7 +14,7 @@ categories:
 name: Percona Monitoring Plugins
 version: 1.1.7
 homepage: https://www.percona.com/software/database-tools/percona-monitoring-plugins 
-logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-jps/master/img/percona-monitoring.png'
+logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-monitoring-jps/master/img/percona-monitoring.png'
 description:
   short: Percona Monitoring Plugins (Nagios)
   text: Percona Monitoring Plugins (Nagios) are high-quality components to add enterprise-class MySQL® and MongoDB® monitoring and graphing capabilities to your existing on-premise monitoring solutions.

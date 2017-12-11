@@ -14,7 +14,7 @@ categories:
 name: Percona Toolkit (MySQL/MariaDB management CLI tools)
 version: 3.0.5
 homepage: https://www.percona.com/software/database-tools/percona-toolkit 
-logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-jps/master/img/percona-toolkit.png'
+logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-monitoring-jps/master/img/percona-toolkit.png'
 description:
   short: Percona Toolkit for easier management
   text: Percona Toolkit is a collection of advanced command-line tools used by Percona) support staff to perform a variety of MySQL, MongoDB, and system tasks that are too difficult or complex to perform manually.
