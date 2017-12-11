@@ -1,6 +1,6 @@
-# Percona Toolkit for Jelastic
+# Percona Toolkit and Monitoring for Jelastic
 
-This add-on install Percona Toolkit on MySQL and MariaDB containers 
+These add-ons installs Percona Toolkit and Monitoring Plugins on MySQL and MariaDB containers 
 
 ## Fork it, PR us
 
@@ -9,3 +9,4 @@ If you want to make this better, and you know how to. Don't hesitate to fork thi
 ## Credits
 
 * [Percona Toolkit](https://www.percona.com/software/database-tools/percona-toolkit)
+* [Percona Monitoring Plugins](https://www.percona.com/software/database-tools/percona-monitoring-plugins)
