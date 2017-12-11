@@ -11,7 +11,7 @@ targetNodes:
   - Percona
 categories:
 - apps/dev-and-admin-tools
-name: Percona Toolkit (MySQL/MariaDB management CLI tools)
+name: Percona Toolkit
 version: 3.0.5
 homepage: https://www.percona.com/software/database-tools/percona-toolkit 
 logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-monitoring-jps/master/img/percona-toolkit.png'
