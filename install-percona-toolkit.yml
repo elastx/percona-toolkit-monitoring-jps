@@ -18,26 +18,20 @@ logo: 'https://raw.githubusercontent.com/elastx/percona-toolkit-monitoring-jps/m
 description:
   short: Percona Toolkit for easier management
   text: Percona Toolkit is a collection of advanced command-line tools used by Percona) support staff to perform a variety of MySQL, MongoDB, and system tasks that are too difficult or complex to perform manually.
+
 onInstall:
-  call:
-  - procedure: addPerconaToolkit
+  addPerconaToolkit
 onUninstall:
-  call:
-    procedure: removePerconaToolkit
-procedures:
-- id: addPerconaToolkit
-  onCall:
-  - executeShellCommands:
-    - nodeMission: sqldb
-      commands:
+  removePerconaToolkit
+  
+actions:
+  addPerconaToolkit:
+    cmd[sqldb]:
       - yum install -y https://www.percona.com/downloads/percona-toolkit/3.0.5/binary/redhat/7/x86_64/percona-toolkit-3.0.5-1.el7.x86_64.rpm
-      user: root
-- id: removePerconaToolkit
-  onCall:
-  - executeShellCommands:
-    - nodeMission: sqldb
-      commands:
+    user: root
+  removePerconaToolkit:
+    cmd[sqldb]:
       - yum remove -y percona-toolkit
-      user: root
+    user: root
 
 success: The installation has been successfully completed.
